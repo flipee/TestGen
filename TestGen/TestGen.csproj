@@ -71,6 +71,12 @@
     <Compile Include="ColControlTipoQuestao.cs" />
     <Compile Include="ColControlComplexidade.cs" />
     <Compile Include="DGVPrinter.cs" />
+    <Compile Include="FormEditorAvaliacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditorAvaliacao.designer.cs">
+      <DependentUpon>FormEditorAvaliacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAvaliacao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,12 +94,6 @@
     </Compile>
     <Compile Include="FormCargaInicial.Designer.cs">
       <DependentUpon>FormCargaInicial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormEditorAvaliacao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormEditorAvaliacao.Designer.cs">
-      <DependentUpon>FormEditorAvaliacao.cs</DependentUpon>
     </Compile>
     <Compile Include="FormExportarExcel.cs">
       <SubType>Form</SubType>
@@ -220,6 +220,9 @@
     <Compile Include="UniqueExpressionCollection.cs" />
     <Compile Include="Validacoes.cs" />
     <Compile Include="ViewControl.cs" />
+    <EmbeddedResource Include="FormEditorAvaliacao.resx">
+      <DependentUpon>FormEditorAvaliacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAvaliacao.resx">
       <DependentUpon>FormAvaliacao.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,9 +252,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDisciplina.resx">
       <DependentUpon>FormDisciplina.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormEditorAvaliacao.resx">
-      <DependentUpon>FormEditorAvaliacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormExecutaGeracaoAvaliacao.resx">
       <DependentUpon>FormExecutaGeracaoAvaliacao.cs</DependentUpon>
