@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D1F48671-880A-4913-9E23-CE97C4A212AB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TestGen</RootNamespace>
+    <AssemblyName>TestGen</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LiteDB, Version=3.1.0.0, Culture=neutral, PublicKeyToken=4ee40123013c9f27, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiteDB.3.1.0\lib\net35\LiteDB.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectListView, Version=2.9.2.0, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
+      <HintPath>..\packages\ObjectListView.ClientProfile.2.9.4\lib\net40-Client\ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDados.cs" />
+    <Compile Include="ColControlTipoQuestao.cs" />
+    <Compile Include="ColControlComplexidade.cs" />
+    <Compile Include="DGVPrinter.cs" />
+    <Compile Include="FormAvaliacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAvaliacao.designer.cs">
+      <DependentUpon>FormAvaliacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroAvaliacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroAvaliacoes.Designer.cs">
+      <DependentUpon>FormCadastroAvaliacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCargaInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCargaInicial.Designer.cs">
+      <DependentUpon>FormCargaInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditorAvaliacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditorAvaliacao.Designer.cs">
+      <DependentUpon>FormEditorAvaliacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExportarExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExportarExcel.Designer.cs">
+      <DependentUpon>FormExportarExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemControlTipoQuestao.cs" />
+    <Compile Include="Converter.cs" />
+    <Compile Include="DBControl.cs" />
+    <Compile Include="FormCadastroCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroCursos.Designer.cs">
+      <DependentUpon>FormCadastroCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroDisciplinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroDisciplinas.designer.cs">
+      <DependentUpon>FormCadastroDisciplinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroProfessores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroProfessores.Designer.cs">
+      <DependentUpon>FormCadastroProfessores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroQuestoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroQuestoes.designer.cs">
+      <DependentUpon>FormCadastroQuestoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfigurarInstituicao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfigurarInstituicao.Designer.cs">
+      <DependentUpon>FormConfigurarInstituicao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCurso.Designer.cs">
+      <DependentUpon>FormCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDisciplina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDisciplina.designer.cs">
+      <DependentUpon>FormDisciplina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExecutaGeracaoAvaliacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExecutaGeracaoAvaliacao.Designer.cs">
+      <DependentUpon>FormExecutaGeracaoAvaliacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGerarAvaliacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGerarAvaliacao.Designer.cs">
+      <DependentUpon>FormGerarAvaliacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPesquisar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPesquisar.Designer.cs">
+      <DependentUpon>FormPesquisar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProfessor.designer.cs">
+      <DependentUpon>FormProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuestao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuestao.designer.cs">
+      <DependentUpon>FormQuestao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSobre.Designer.cs">
+      <DependentUpon>FormSobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneticAlgorithms\Algorithm\GeneticAlgorithmEventHandler.cs" />
+    <Compile Include="GeneticAlgorithms\Algorithm\GeneticAlgorithms.cs" />
+    <Compile Include="GeneticAlgorithms\Algorithm\GeneticAlgorithmUtility.cs" />
+    <Compile Include="GeneticAlgorithms\Algorithm\Genome.cs" />
+    <Compile Include="GeneticAlgorithms\Algorithm\GenomeCollection.cs" />
+    <Compile Include="GeneticAlgorithms\Custom\CustomCrossover.cs" />
+    <Compile Include="GeneticAlgorithms\Custom\CustomGenome.cs" />
+    <Compile Include="GeneticAlgorithms\Custom\CustomFactory.cs" />
+    <Compile Include="GeneticAlgorithms\Custom\CustomEvaluator.cs" />
+    <Compile Include="GeneticAlgorithms\Interfaces\ICrossover.cs" />
+    <Compile Include="GeneticAlgorithms\Interfaces\IEvaluateGenome.cs" />
+    <Compile Include="GeneticAlgorithms\Algorithm\ExitConditions.cs" />
+    <Compile Include="GeneticAlgorithms\Interfaces\IGenomeFactory.cs" />
+    <Compile Include="GeneticAlgorithms\Interfaces\IGenomeSelector.cs" />
+    <Compile Include="GeneticAlgorithms\Algorithm\SerializeAnything.cs" />
+    <Compile Include="ParametersGeneticAlgorithm.cs" />
+    <Compile Include="ProcessGeneticAlgorithm.cs" />
+    <Compile Include="GeneticAlgorithms\Selectors\RandomSelector.cs" />
+    <Compile Include="GeneticAlgorithms\Selectors\SequentialSelector.cs" />
+    <Compile Include="GeneticAlgorithms\Selectors\WeightedSelector.cs" />
+    <Compile Include="MDIFormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIFormMain.Designer.cs">
+      <DependentUpon>MDIFormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mensagem.cs" />
+    <Compile Include="DBModel.cs" />
+    <Compile Include="PesquisaEventArgs.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferenceExpression.cs" />
+    <Compile Include="ReferenceExpressionCollection.cs" />
+    <Compile Include="ItemControlComplexidade.cs" />
+    <Compile Include="UniqueExpression.cs" />
+    <Compile Include="UniqueExpressionCollection.cs" />
+    <Compile Include="Validacoes.cs" />
+    <Compile Include="ViewControl.cs" />
+    <EmbeddedResource Include="FormAvaliacao.resx">
+      <DependentUpon>FormAvaliacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroAvaliacoes.resx">
+      <DependentUpon>FormCadastroAvaliacoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroCursos.resx">
+      <DependentUpon>FormCadastroCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroDisciplinas.resx">
+      <DependentUpon>FormCadastroDisciplinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroProfessores.resx">
+      <DependentUpon>FormCadastroProfessores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroQuestoes.resx">
+      <DependentUpon>FormCadastroQuestoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCargaInicial.resx">
+      <DependentUpon>FormCargaInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfigurarInstituicao.resx">
+      <DependentUpon>FormConfigurarInstituicao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCurso.resx">
+      <DependentUpon>FormCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDisciplina.resx">
+      <DependentUpon>FormDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditorAvaliacao.resx">
+      <DependentUpon>FormEditorAvaliacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExecutaGeracaoAvaliacao.resx">
+      <DependentUpon>FormExecutaGeracaoAvaliacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExportarExcel.resx">
+      <DependentUpon>FormExportarExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGerarAvaliacao.resx">
+      <DependentUpon>FormGerarAvaliacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPesquisar.resx">
+      <DependentUpon>FormPesquisar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProfessor.resx">
+      <DependentUpon>FormProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuestao.resx">
+      <DependentUpon>FormQuestao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSobre.resx">
+      <DependentUpon>FormSobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIFormMain.resx">
+      <DependentUpon>MDIFormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CustomDictionary.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
